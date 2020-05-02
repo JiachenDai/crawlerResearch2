@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CrawlerSearch</title>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script>
+        $(function () {
+            //给button绑定单击函数
+            $("#button_click").click(function () {
+                let html = $("#shuru").val();
+                $.get("searchServlet",{shuru:html},function (data) {
+
+
+                });
+
+            })
+
+        })
+    </script>
+</head>
+<body>
+输入搜索内容<input id="shuru" type="text"/>
+<button id="button_click" type="button">搜索</button>
+</body>
+</html>
